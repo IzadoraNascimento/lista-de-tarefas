@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Appointment from "./components/Appointment"
 
 export default function App() {
   const [appointments, setAppointments] = useState([])
@@ -10,7 +11,7 @@ export default function App() {
       name,
       done: false
     }
-    setAppointments([...appointments,newAppointment])
+    setAppointments((currentState) =>[... currentState,newAppointment])
   }
 
 
@@ -21,7 +22,10 @@ export default function App() {
         <h2>Segunda Feira</h2>
         <ul className="list-disc list-inside">
           {appointments.map(appointment => (
-            <li key={appointment.id}>{appointment.name}</li>
+            <Appointment 
+              key={appointment.id}
+              appointment={appointment}
+            />
           ))}
         </ul>
         <button onClick={addAppointment}>Adicionar</button>
