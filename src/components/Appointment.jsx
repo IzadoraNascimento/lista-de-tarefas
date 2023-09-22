@@ -1,18 +1,24 @@
 export default function Appointment(props) {
   return (
-    <li>
+    <li className={props.appointment.done ? 'done' : ''}>
       <div>
         <input 
-        type="checkbox" 
-        id={`appointment-${props.appointment.id}`}
+          type="checkbox" 
+          id={`appointment-${props.appointment.id}`}
+          onChange={() => props.toggleDone(props.appointment.id)}
+          checked={props.appointment.done}
         />
         <label 
-        htmlFor={`appointment-${props.appointment.id}`}
+          htmlFor={`appointment-${props.appointment.id}`}
         >
           {props.appointment.name}
         </label>
       </div>
-      <button>Remover</button>
+      <button 
+        onClick={()=> props.removeAppointment(props.appointment.id)}
+      >
+        Remover
+      </button>
     </li>
   )
 }

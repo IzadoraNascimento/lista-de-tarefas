@@ -14,6 +14,23 @@ export default function App() {
     setAppointments((currentState) =>[... currentState,newAppointment])
   }
 
+  const toggleDone = (appointmentId) => {
+    setAppointments((currentState) => (
+      currentState.map(appointment => {
+        if (appointment.id !== appointmentId)
+          return appointment
+        else
+          return {...appointment, done: !appointment.done}
+      })
+    ))
+  }
+
+  const removeAppointment = (appointmentId) => {
+    setAppointments(currentState => (
+      currentState.filter(appointment => appointment.id !== appointmentId)
+    ))
+  }
+
 
   return (
     <>
@@ -25,6 +42,8 @@ export default function App() {
             <Appointment 
               key={appointment.id}
               appointment={appointment}
+              toggleDone={toggleDone}
+              removeAppointment={removeAppointment}
             />
           ))}
         </ul>
