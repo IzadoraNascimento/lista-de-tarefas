@@ -1,54 +1,11 @@
-import { useState } from "react"
-import Appointment from "./components/Appointment"
+import Day from "./components/Day";
 
 export default function App() {
-  const [appointments, setAppointments] = useState([])
-
-  const addAppointment = () => {
-    const name = prompt("Informe o nome da Tarefa:")
-    const newAppointment = {
-      id: Math.floor(1000000 * (Math.random() + 1)),
-      name,
-      done: false
-    }
-    setAppointments((currentState) =>[... currentState,newAppointment])
-  }
-
-  const toggleDone = (appointmentId) => {
-    setAppointments((currentState) => (
-      currentState.map(appointment => {
-        if (appointment.id !== appointmentId)
-          return appointment
-        else
-          return {...appointment, done: !appointment.done}
-      })
-    ))
-  }
-
-  const removeAppointment = (appointmentId) => {
-    setAppointments(currentState => (
-      currentState.filter(appointment => appointment.id !== appointmentId)
-    ))
-  }
-
-
+  const week = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira","Sexta-feira", "Sábado"]
   return (
     <>
       <h1>Planner Semanal</h1>
-      <div className="day">
-        <h2>Segunda Feira</h2>
-        <ul className="list-disc list-inside">
-          {appointments.map(appointment => (
-            <Appointment 
-              key={appointment.id}
-              appointment={appointment}
-              toggleDone={toggleDone}
-              removeAppointment={removeAppointment}
-            />
-          ))}
-        </ul>
-        <button onClick={addAppointment}>Adicionar</button>
-      </div>
+      {week.map(day => <Day key={day} day={day} />)}
     </>
 
   )
