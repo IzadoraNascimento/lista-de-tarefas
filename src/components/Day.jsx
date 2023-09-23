@@ -31,9 +31,13 @@ export default function Day(props){
     ))
   }
   return (
-    <>
-      <div className="day">
-        <h2>{props.day}</h2>
+    <div className="">
+      <div className="day w-64 h-40 border border-black rounded-md shadow-lg ">
+        <h2 className="text-center text-lg font-bold">
+          <span className="inline-block border-b border-black mb-2">
+            {props.day}
+          </span>          
+        </h2>
         <ul className="list-disc list-inside">
           {appointments.map(appointment => (
             <Appointment 
@@ -44,8 +48,14 @@ export default function Day(props){
             />
           ))}
         </ul>
-        <button onClick={addAppointment}>Adicionar</button>
+        <div className="flex items-center justify-center p-8">
+          <button className="bg-emerald-400 p-2 rounded-lg"
+            onClick={addAppointment}
+          >
+            Adicionar
+          </button>
+        </div>
       </div>
-    </>
+    </div>
   )
 }
