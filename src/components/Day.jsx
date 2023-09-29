@@ -32,9 +32,9 @@ export default function Day(props){
   }
   return (
     <div className="">
-      <div className="">
-        <h2 className="">
-          <span className="">
+      <div className=" rounded border-2 border-stone-400 h-full">
+        <h2 className="text-lg font-medium text-center">
+          <span className="inline-block border-b border-stone-400 mb-2">
             {props.day}
           </span>          
         </h2>
@@ -48,8 +48,8 @@ export default function Day(props){
             />
           ))}
         </ul>
-        <div className="">
-          <button className=""
+        <div className="flex justify-center mt-4">
+          <button className="bg-emerald-400 p-1 mb-4 text-sm font-medium rounded-md"
             onClick={addAppointment}
           >
             Adicionar
