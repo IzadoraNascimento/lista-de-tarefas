@@ -1,8 +1,48 @@
-# React + Vite
+## Índice
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- [Visão geral](#visão-geral)
+   - [Descrição](#descrição)
+   - [Captura de tela](#captura-de-tela)
+   - [Construído com](construiido-com)
+   - [O que aprendi](#o-que-aprendi)
+   - [Recursos úteis](#useful-resources)
+- [Autor](#autor)
 
-Currently, two official plugins are available:
+## Visão geral
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Descrição
+
+Os usuários devem ser capazes de:
+
+Adicionar e remover tarefas para cada dia da semana, conforme as tarefas forem sido realizadas, ao selecionar a opção do checkbox a tarefa ficará "riscada" na lista.  
+
+
+### Captura de tela
+
+![Mobile](https://github.com/IzadoraNascimento/lista-de-tarefas/blob/master/src/assets/Captura%20de%20tela%202023-09-29%20160232.png)
+![Tablet](https://github.com/IzadoraNascimento/lista-de-tarefas/blob/master/src/assets/Captura%20de%20tela%202023-09-29%20160303.png)
+![Desktop](https://github.com/IzadoraNascimento/lista-de-tarefas/blob/master/src/assets/Captura%20de%20tela%202023-09-29%20160333.png)
+
+
+### Link para acessar o site - 
+[Planner Semanal](https://planner-semanal.netlify.app/)
+
+### Construído com
+
+- [React](https://reactjs.org/) - Biblioteca JS
+- [TailwindCSS](https://tailwindcss.com/docs/installation) - TailwindCSS
+
+### O que eu aprendi
+
+1. Domínio do React com Hooks: Reforcei minha proficiência em React, aprimorando meu entendimento e habilidades na utilização de hooks para gerenciar o estado e os efeitos da minha aplicação.
+2. Criação de Componentes: Aprofundei minha experiência na criação de componentes em React, tanto os componentes pai quanto os filhos, permitindo uma organização eficaz e modularização do código.
+3. Estilização com TailwindCSS: Utilizei o TailwindCSS para estilizar todo o projeto, aproveitando a abordagem utility-first para uma estilização eficiente e consistente. Além disso, explorei os breakpoints do TailwindCSS para tornar a aplicação responsiva, garantindo uma ótima experiência do usuário em dispositivos de diferentes tamanhos de tela
+
+
+### Recursos úteis
+
+- [OneBitCode](https://cursos.onebitcode.com/)  
+
+## Autor
+
+- LinkedIn - [Izadora Santos Nascimento](https://www.linkedin.com/in/izadorasantosn/)
