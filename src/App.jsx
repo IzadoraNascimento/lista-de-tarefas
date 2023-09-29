@@ -7,7 +7,7 @@ export default function App() {
     <div className="flex justify-center p-4">
     <h1 className="text-2xl font-semibold">Planner Semanal</h1>
     </div>
-    <div className="grid grid-rows-1 gap-4">
+    <div className="grid grid-rows-1 gap-2 md:grid-cols-3">
       {week.map(day => <Day key={day} day={day} />)}
     </div>
     </>
